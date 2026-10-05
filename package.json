@@ -1,0 +1,35 @@
+{
+  "name": "automation-pos-omnia",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:ui": "bddgen && playwright test --project=ui",
+    "test:api": "bddgen && playwright test --project=api",
+    "test:registration": "bddgen && cross-env RUN_REGISTRATION=true playwright test --project=registration",
+    "test:tag": "bddgen && playwright test",
+    "allure:generate": "allure generate reports/allure-results --clean -o reports/allure-report",
+    "allure:open": "allure open reports/allure-report",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.10.0",
+    "allure-commandline": "^2.46.1",
+    "allure-js-commons": "^3.13.0",
+    "allure-playwright": "^3.13.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^16.6.1",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "playwright-bdd": "^9.2.1",
+    "prettier": "^3.9.0",
+    "prettier-plugin-gherkin": "^4.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.46.0"
+  }
+}
